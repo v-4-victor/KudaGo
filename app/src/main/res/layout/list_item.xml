@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+<!--        <variable-->
+<!--            name="pic"-->
+<!--            type="com.example.kudago.network.StockInfo" />-->
+
+<!--        <variable-->
+<!--            name="viewModel"-->
+<!--            type="com.example.stocks.ui.main.mainFragment.MainViewModel" />-->
+
+<!--        <import type="com.example.stocks.ui.main.mainFragment.MainViewModel.LivePrice" />-->
+
+<!--        <import type="android.graphics.Color" />-->
+<!--        <import type="com.example.stocks.R" />-->
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/CardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="4dp"
+        >
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="60dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="sd"
+            android:padding="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/companySymbol"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@android:drawable/editbox_dropdown_dark_frame" />
+
+        <TextView
+            android:id="@+id/ticker"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:maxLines="1"
+
+            android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@+id/curPrice"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/companySymbol"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:maxLines="1"
+            app:layout_constraintEnd_toStartOf="@+id/opPrice"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/ticker" />
+
+        <TextView
+            android:id="@+id/curPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:textAlignment="viewEnd"
+
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/opPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:textAlignment="viewEnd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/curPrice" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
